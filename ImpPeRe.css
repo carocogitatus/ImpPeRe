@@ -3,12 +3,27 @@
 	src: url('SfDistantGalaxy-0l3d.ttf');
 }
 @font-face {
+	font-family: galbasic;
+	src: url('galbasic.ttf');
+}
+@font-face {
 	font-family: Droidobesh;
 	src: url('DroidobeshDepot-gxmVE.otf');
+	font-weight: lighter;
+}
+@font-face {
+	font-family: Aurebesh;
+	src: url('Aurebesh.otf');
+/*	font-weight: lighter; */
+}
+@font-face {
+	font-family: Starkiller;
+	src: url('Starkiller.ttf');
 }
 
 body {
-	font-family: Calibri, sans-serif;
+/*	font-family: Calibri, sans-serif; */
+	font-family: Starkiller, sans-serif;
 	margin: 20px;
 	background-color: #2c2c2c; /* dark grey */
 	color: #ffffd0; /* off white */
@@ -18,7 +33,6 @@ a {
 }
 label {
 	display: block;
-	margin-bottom: 5px;
 	font-weight: bold;
 	font-size: bigger;
 }
@@ -41,10 +55,10 @@ button {
 	color: white;
 	cursor: pointer;
 	display: inline-block;
-	float: left;
-	margin-bottom: 10px;
 	padding: 8px 16px;
 	text-align: center;
+	display: inline-block;
+	font-size: 0.7em;
 }
 button:hover {
 	background-color: #0056b3;
@@ -83,7 +97,7 @@ pre {
 }
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
-  visibility: visible;
+/*  visibility: visible;  I think these get in the way more than they help */
 }
 .section {
 	border: 1px solid #555;
@@ -94,14 +108,22 @@ pre {
 	background-color: #3a3a3a; /* slightly lighter dark grey */
 	vertical-align: top;
 }
+.main-header {
+    display: inline-block;
+    font-size: 2em;
+    margin-left: 0;
+    margin-right: 0;
+    vertical-align: bottom;
+}
 .font-normal {
 	font-family: Calibri, sans-serif;
 }
 .font-starwars {
-	font-family: StarWars, sans-serif;
+	font-family: Starkiller, sans-serif;
+	font-weight: lighter;
 }
 .font-besh {
-	font-family: Droidobesh, sans-serif;
+	font-family: Aurebesh, sans-serif;
 }
 .form-group {
 	margin-bottom: 15px;
@@ -126,15 +148,20 @@ pre {
 }
 .align-left {
 	text-align: left;
+	float: left;
 }
 .align-right {
 	text-align: right;
+	float: right;
 }
 .align-top {
-	vertical-align:top;
+	vertical-align: top;
 }
 .align-middle {
-	vertical-align:middle;
+	vertical-align: middle;
+}
+.align-bottom {
+	vertical-align: bottom;
 }
 .flex-container {
 	display: flex;
@@ -166,7 +193,8 @@ pre {
 }
 .local-customs-box {
 	vertical-align: top;
-	display: block;
+	width: 33%;
+	display: table-cell;
 	margin: 10px;
 	padding: 10px;
 	border: 5px solid grey;
@@ -199,6 +227,10 @@ pre {
 }
 .gravity-low {
 	color: aquamarine;
+	font-weight: lighter;
+}
+.gravity-none {
+	color: red;
 	font-weight: lighter;
 }
 .ship-manifest-header {
@@ -246,6 +278,18 @@ pre {
 .location-details-item {
 	display: inline-block;
 }
+.hyperlanes {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+.header3 {
+	vertical-align: text-bottom;
+	display: contents;
+	font-size: larger;
+	font-weight: bold;
+	margin: 10px 0px 5px 0px;
+	padding: 0px 0px 0px 0px;
+}
 .nowrap {
 	white-space: nowrap;
 }
@@ -253,7 +297,7 @@ pre {
 	color: red;
 }
 .silhouette-5-plus:after {
-	content: " (commercial/military starport rates apply)";
+	content: "(commercial/military starport rates apply)";
 }
 .atmos-4 {
 	color: fuchsia;
@@ -303,17 +347,73 @@ pre {
 	color: chartreuse;
 }
 .starwars-dice {
-  border: solid white 1px;
-  width: fit-content;
-  padding: 0px 4px 0px 4px;
-  font-weight: bold;
-  font-size: smaller;
+	border: solid white 1px;
+	width: fit-content;
+	padding: 0px 4px 0px 4px;
+	font-weight: bold;
+	font-size: smaller;
 }
 .boost {
-  background-color: lightblue;
-  color: black;
+	background-color: lightblue;
+	color: black;
 }
 .setback {
-  background-color: black;
-  color: white;
+	background-color: black;
+	color: white;
+}
+.ability {
+	background-color: green;
+	color: black;
+}
+.proficiency {
+	background-color: yellow;
+	color: black;
+}
+.difficulty {
+	background-color: purple;
+	color: white;
+}
+.challenge {
+	background-color: red;
+	color: black;
+}
+.force {
+	background-color: #FEFEFE;
+	color: #010101;
+}
+.success {
+	background-color: green;
+	color: white;
+}
+.failure {
+	background-color: purple;
+	color: white;
+}
+.advantage {
+	background-color: green;
+	color: white;
+}
+.threat {
+	background-color: purple;
+	color: white;
+}
+.triumph {
+	background-color: yellow;
+	color: black;
+}
+.despair {
+	background-color: red;
+	color: black;
+}
+.payme-link {
+	font-size: smaller;
+}
+.cargo-declared {
+	font-size: larger;
+}
+.select-short-number {
+	max-width: 50px;
+}
+.select-medium-number {
+	max-width: 100px;
 }

@@ -42,6 +42,18 @@ const hyperspaceRoutes = [
 	"Junctions": "Corellian Run,Death Wind Corridor,Old Corellian Run,Ryloth Road,The Crystal Passage,Old Corellian Run,Tatooine Dash,Triellus Trade Route",
 },
 {
+	"Name": "Kessel Run",
+	"SpeedFactor": 0.9,
+	"Route": "Formas,Rion,Kessel",
+	"Junctions": "Kessel Trade Corridor,Pabol Sleheyron,Triellus Trade Route",
+},
+{
+	"Name": "Kessel Trade Corridor",
+	"SpeedFactor": 0.9,
+	"Route": "Kessel,Zerm",
+	"Junctions": "Pabol Sleheyron,Kessel Run",
+},
+{
 	"Name": "Namadii Corridor",
 	"SpeedFactor": 0.9,
 	"Route": "Coruscant,Tanjay IV,Weerden,Galvoni III,Twith,Pantolomin,Borleias,Ord Mirit,Palanhi,Carratos,Voltare,Meastrinnar,Aphran,Bengat,Bilbringi,Rondai-2,Coth Fuuras space station,Dorin,Carvandir,Vaced,Glee Anselm,Belshar Othacuu,Ord Varee,Kalaan,Masgen,Ansion,Namadii",
@@ -206,7 +218,7 @@ const hyperspaceRoutes = [
 {
 	"Name": "Overic Griplink",
 	"SpeedFactor": 0.9,
-	"Route": "Quermia,Toola,Florn,Ton-Falk Pakuuni,Shaylin 18,Turkana,Munto Codru,Reginard,Ruisto,Mon Cala (Dac)",
+	"Route": "Quermia,Toola,Florn,Ton-Falk Pakuuni,Shaylin 18,Turkana,Munto Codru,Reginard,Ruisto,Karkaris,Mon Cala (Dac)",
 	"Junctions": "Perlemian Trade Route,Pakuuni Drift,Minntooine Spur,Tidal Circuit",
 },
 {
@@ -352,6 +364,12 @@ const hyperspaceRoutes = [
 	"SpeedFactor": 0.9,
 	"Route": "Annaj,Ovise system,Thonner,Maya Kovel,Vasha,Houche",
 	"Junctions": "Spar Trade Route,Ovise Reach",
+},
+{
+	"Name": "Moddell Reach",
+	"SpeedFactor": 0.9,
+	"Route": "Annaj,Cerea",
+	"Junctions": "Annaj-Houche Run,Spar Trade Route,Cerean Reach",
 },
 {
 	"Name": "Ovise Reach",
@@ -920,7 +938,7 @@ const hyperspaceRoutes = [
 {
 	"Name": "Burke's Trailing",
 	"SpeedFactor": 0.9,
-	"Route": "Ponemah Terminal - Jakku - Adrathorpe - Jedha - Ord Mantell",
+	"Route": "Ponemah Terminal,Jakku,Adrathorpe,Jedha,Ord Mantell",
 	"Junctions": "Celanon Spur,Entralla Route",
 },
 {
@@ -928,5 +946,29 @@ const hyperspaceRoutes = [
 	"SpeedFactor": 0.9,
 	"Route": "Daupherm,Botor system,Abregado-rae,Giju,Yag'Dhul",
 	"Junctions": "Giju Run,Corellian Trade Spine",
+},
+{
+	"Name": "Biox Detour",
+	"SpeedFactor": 0.9,
+	"Route": "Takodana,Ring of Kafrene,Malastare",
+	"Junctions": "Rimma Trade Route,Hydian Way",
+},
+{
+	"Name": "The Loop",
+	"SpeedFactor": 0.9,
+	"Route": "Mijos,Shuldene,Lutrillia",
+	"Junctions": "Lutrillian Cross,Cerean Reach,Koda Spur,Lutrillia,Darlyn Boda",
+},
+{
+	"Name": "Koda Spur",
+	"SpeedFactor": 0.9,
+	"Route": "Lutrillia,Ryoone,Urn-Aram,Koda Space Station",
+	"Junctions": "Lutrillian Cross,Cerean Reach",
+},
+{
+	"Name": "Lutrillia–Darlyn Boda Trade Route",
+	"SpeedFactor": 0.9,
+	"Route": "Lutrillia,Darlyn Boda",
+	"Junctions": "Corellian Trade Spine,Lutrillian Cross",
 },
 ];

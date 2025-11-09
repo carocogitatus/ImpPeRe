@@ -3,47 +3,51 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Imperial Penal Report</title>
-	<link rel="icon" type="image/x-icon" href="ImpPeRe.png">
+	<title>Imperial Penal References</title>
+	<link rel="icon" type="image/x-icon" href="favicon.png">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="ImpPeRe.js"></script>
 	<script src="locations.js"></script>
 	<script src="regions.js"></script>
 	<script src="events.js"></script>
 	<script src="hyperspace.js"></script>
+	<script src="missions.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+	<script src="ImpPeRe.js"></script>
 	<link rel="stylesheet" href="ImpPeRe.css">
 </head>
 
 <body id='body'>
 
-	<h2 id="mainHeader" class="font-starwars">Imperial Penal Report</h2>
-	<button onclick="switchFontBesh()" class="font-besh tooltip">
+	<span id="mainHeader" class="main-header align-left font-starwars">Imperial Penal References</span>
+	<button onclick="switchFontBesh()" class="font-besh align-bottom align-right tooltip">
 		Aurebesh
-		<span class="tooltiptext">
-		Switch to Aurebesh font.
-		</span>
+		<span class="tooltiptext">Switch to Aurebesh font.</span>
 	</button>
-	<button onclick="switchFontStarWars()" class="font-starwars tooltip">
+	<button onclick="switchFontStarWars()" class="font-starwars align-bottom align-right tooltip">
 		Galactic Basic
-		<span class="tooltiptext">
-		Switch to Star Wars font.
-		</span>
+		<span class="tooltiptext">Switch to Star Wars font.</span>
 	</button>
-	<button onclick="switchFontNormal()" class="font-normal tooltip">
+	<button onclick="switchFontNormal()" class="font-normal align-bottom align-right tooltip">
 		En'glsh
-		<span class="tooltiptext">
-		Switch to normal font.
-		</span>
+		<span class="tooltiptext">Switch to normal font.</span>
 	</button>
 
 	<table border="2" width="100%">
-		<tr>
-			<td class="width-half margin-0">
-				<label for="locationDropdown" id="locationDropdownLabel" class="font-starwars">Location:
-					<select id="locationDropdown">
-						<option value="">-- Current Location --</option>
-					</select>
-				</label>
+		<tr style="display: table-cell;">
+			<td class="margin-0">
+
+				<div class="flex-container">
+					<label for="locationDropdown" id="locationDropdownLabel" class="font-starwars">Location:
+						<select id="locationDropdown">
+							<option value="">-- Current Location --</option>
+						</select>
+					</label>
+					<div style="font-size: larger; margin: 0px 0px 0px 10px;">
+						<a id="currentURL" href="https://starwars.fandom.com/wiki/Planet/Legends" target="_blank">
+							your location
+						</a>
+					</div>
+				</div>
 				<div class="flex-container secret-filters hidden manifest-menu-hidden"><!-- display if Pirate Holonet or similar is installed -->
 					<em>Filters: </em>&nbsp;&nbsp;&nbsp;
 					<label for="filterCurrBlackMarket">
@@ -54,38 +58,20 @@
 					</label>&nbsp;&nbsp;
 					<label for="filterCurrStarportGrade">
 						Starport Grade: <input type="number" id="filterCurrStarportGrade" class="filter-input-hidden" min="0" max="5" defaultValue="0"></input>&nbsp;&nbsp;
+					</label>&nbsp;&nbsp;
+					<label for="filterDistance">
+						Max Distance: <input type="number" id="filterDistance" class="filter-input-hidden" min="0" max="27" defaultValue="0"></input>&nbsp;&nbsp;
 					</label>
 				</div>
-				<a id="currentURL" href="https://starwars.fandom.com/wiki/Planet/Legends" target="_blank">https://starwars.fandom.com/wiki/Planet/Legends</a>
-			</td>
-			<td class="width-half margin-0">
-				<label for="destinationDropdown" id="destinationDropdownLabel" class="font-besh">Destination:
-					<select id="destinationDropdown">
-						<option value="">-- Select Destination --</option>
-					</select>
-				</label>
-				<div class="flex-container secret-filters hidden manifest-menu-hidden"><!-- display if Pirate Holonet or similar is installed -->
-					<em>Filters: </em>&nbsp;&nbsp;&nbsp;
-					<label for="filterDestBlackMarket">
-						Black Market: <input type="checkbox" id="filterDestBlackMarket" class="filter-input-hidden"></input>
-					</label>&nbsp;&nbsp;
-					<label for="filterDestShadowport">
-						Shadowport: <input type="checkbox" id="filterDestShadowport" class="filter-input-hidden"></input>
-					</label>&nbsp;&nbsp;
-					<label for="filterDestStarportGrade">
-						Starport grade: <input type="number" id="filterDestStarportGrade" class="filter-input-hidden" min="0" max="5" defaultValue="0"></input>&nbsp;&nbsp;
-					</label>
-				</div>
-				<a id="destURL" href="https://starwars.fandom.com/wiki/Planet/Legends" target="_blank">https://starwars.fandom.com/wiki/Planet/Legends</a>
 			</td>
 		</tr>
 		<tr>
-			<td class="align-top width-half margin-0 colspan-2">
+			<td class="align-top margin-0 colspan-2">
 				<div id="locationDetails" class="section tooltip width-half">
 					<span class="tooltiptext">
 					Known and reported details of your current location.
 					</span>
-					<h3>BoSS Database</h3>
+					<div class="header3 align-left">BoSS Database</div>
 					<div class="flex-container">
 						<div class="box-around">
 							<strong>Region:</strong> <a id="currentRegionURL"
@@ -102,18 +88,15 @@
 							<strong>Capital City:</strong> <span id="currentCapital">unknown</span>
 						</div>
 						<div class="box-around">
-							<strong>Starport:</strong> <a href="https://starwars.fandom.com/wiki/Spaceport/Legends"><span id="currentStarport">unknown</span></a>
+							<strong>Starport:</strong> <a id="currentStarportURL"
+								href="https://starwars.fandom.com/wiki/Spaceport/Legends"
+								target="_blank">unknown</a>
 						</div>
 						<div class="box-around">
-							<strong>Map:</strong> <span id="currentMap">unknown</span>
+							<strong>Map:</strong> <a href="https://www.starwars.com/star-wars-galaxy-map" target="_blank"><span id="currentMap">unknown</span></a>
 						</div>
 					</div>
-					<div class="flex-container">
-						<div class="box-around">
-							<strong>Hyperlanes:</strong> <pre id="currentHyperlanes">unknown</pre>
-						</div>
-					</div>
-					<h3>Atmosphere & Terrain</h3>
+					<p class="header3 align-left">Atmosphere & Terrain</p>
 					<div class="flex-container">
 						<div class="box-around">
 							<strong>Atmosphere:</strong> <span id="currentAtmosphere">unknown</span>
@@ -130,106 +113,129 @@
 						<div class="box-around">
 							<strong>Inhabitants:</strong> <span id="currentInhabitants">unknown</span>
 						</div>
-<!--
+					</div>
 					<br/>
-					<h3>Current Conditions</h3>
-					<strong>Climate:</strong> unknown
-					<strong>Weather:</strong> unknown
-					<strong>Terrain:</strong> unknown
--->
-					</div>
-				</div>
-			</td>
-			<td class="align-top width-half margin-0 colspan-2">
-				<div id="destinationDetails" class="section tooltip width-half">
-					<span class="tooltiptext">
-					Known and reported details of your Destination.
-					</span>
-					<h3>BoSS Database</h3>
+					<div class="header3 align-left">Astrogation Computer</div>
 					<div class="flex-container">
 						<div class="box-around">
-							<strong>Region:</strong> <a id="destRegionURL"
-								href="https://starwars.fandom.com/wiki/Unknown_Regions/Legends"
-								target="_blank"><span id="destRegion">unknown</span></a>
-						</div>
-						<div class="box-around">
-							<strong>Sector:</strong> <span id="destSector">unknown</span>
-						</div>
-						<div class="box-around">
-							<strong>System:</strong> <span id="destSystem">unknown</span>
-						</div>
-						<div class="box-around">
-							<strong>Capital City:</strong> <span id="destCapital">unknown</span>
-						</div>
-						<div class="box-around">
-							<strong>Starport:</strong> <a href="https://starwars.fandom.com/wiki/Spaceport/Legends"><span id="destStarport">unknown</span></a>
-						</div>
-						<div class="box-around">
-							<strong>Map:</strong> <span id="destMap">unknown</span>
-						</div>
-					</div>
-					<div class="flex-container">
-						<div class="box-around">
-							<strong>Hyperlanes:</strong> <pre id="destHyperlanes">unknown</pre>
-						</div>
-					</div>
-					<h3>Atmosphere & Terrain</h3>
-					<div class="flex-container">
-						<div class="box-around">
-							<strong>Atmosphere:</strong> <span id="destAtmosphere">unknown</span>
-						</div>
-						<div class="box-around">
-							<strong>Terrain:</strong> <span id="destTerrain">unknown</span>
-						</div>
-						<div class="box-around">
-							<strong>Climate:</strong> <span id="destClimate">unknown</span>
-						</div>
-						<div class="box-around">
-							<strong>Gravity:</strong> <span id="destGravity">unknown</span>
-						</div>
-						<div class="box-around">
-							<strong>Inhabitants:</strong> <span id="destInhabitants">unknown</span>
-						</div>
-					</div>
-					<h3>Hyperlane Travel</h3>
-					<div class="flex-container">
-						<div class="box-around">
-							<div>
-								<strong>Estimated Travel Time</strong> (factor <span id="hyperrouteFactor">1.0</span>, Class <span id="ettHyperdriveClass">?</span>): <span id="estHyperspaceTime">calculating...</span><br/>
+							<div class="box-around">
+								<strong>Current Location Hyperlanes:</strong> <pre id="currentHyperlanes" class="hyperlanes">unknown</pre>
 							</div>
-							<div class="reference-note">
-								[ reference (<span id="baseHyperSpaceDistance"></span>factor 1.0, Class 1): <span id="baseHyperspaceTime">calculating...</span> ]
+						</div>
+						<div class="box-around" style="width:40%">
+							<div class="flex-container">
+								<label for="destinationDropdown" id="destinationDropdownLabel" class="font-besh">Destination:
+									<select id="destinationDropdown">
+										<option value="">-- Select Destination --</option>
+									</select>
+								</label>
+								<div style="font-size: larger; margin: 0px 0px 0px 10px;">
+									<a id="destURL" href="https://starwars.fandom.com/wiki/Planet/Legends" target="_blank">
+										your destination
+									</a>
+								</div>
+							</div>
+							<br/>
+							<div id="estTravelTime" class="box-around hidden" style="text-align: center;display: contents;">
+								<div style="align: center; width: 95%; text-align: center;">
+									<strong style="font-size: larger">Estimated Travel Time: </strong>
+									<span id="estHyperspaceTime" style="font-size: larger; color: greenyellow;">calculating...</span>
+									<br/>
+								</div>
+								<div class="reference-note">
+									<span style="font-size: smaller; float: center;">(<span id="baseHyperSpaceDistance"></span>factor <span id="hyperrouteFactor">1.0</span>, Class <span id="ettHyperdriveClass">?</span>)</span>
+									<br/>
+									[ reference: <span id="baseHyperspaceTime" style="color: green;">calculating...</span> (factor 1.0, Class 1) ]
+								</div>
+							</div>
+							<hr style="width: 50%;"/>
+							<div id="travelAdjustments" class="box-around" style="text-align: left; width: 97%" style="text-align: center;display: contents;">
+								<div style="align: center; width: 95%; text-align: center;">
+									<strong style="font-size: smaller">Potential Astrogation Adjustments</strong></span>
+									<span id="hyperspaceDice" style="font-size: smaller">calculating...</span>
+									<br/>
+								</div>
+							</div>
+						</div>
+						<div class="box-around">
+							<div class="box-around">
+								<strong>Destination Hyperlanes:</strong> <pre id="destHyperlanes" class="hyperlanes">unknown</pre>
 							</div>
 						</div>
 					</div>
+					<br/>
 				</div>
 			</td>
 		</tr>
 	</table>
+
+	<!-- Ship Manifest -->
 	<table border="2" width="100%">
-		<tr><!-- Ship, Crew, and Conditions options -->
+		<tr style="display: table-cell;">
 			<td>
 				<p>
-					<div class="nowrap tooltip">
+					<div class="tooltip">
 						<span class="ship-manifest-header">
 							Ship Manifest
 						</span>
 						<ul class="ship-manifest-menu">
+							<li class="ship-manifest-item" style="padding: 2px 5px 0px 10px; text-align: right;">
+								<label for="hullMax" style="padding: 0px 0px 3px 0px;">Hull Trauma max: <input type="number" id="hullMax" class="cargo-declared select-medium-number" min="0" defaultValue="0"></input></label>
+								<label for="hullCurrent" style="padding: 0px 0px 3px 0px;">Hull Trauma current: <input type="number" id="hullCurrent" class="cargo-declared select-medium-number" min="0" defaultValue="0"></input></label>
+							</li>
+							<li class="ship-manifest-item" style="padding: 2px 5px 0px 10px; text-align: right;">
+								<label for="strainMax" style="padding: 0px 0px 3px 0px;">System Strain max: <input type="number" id="strainMax" class="cargo-declared select-medium-number" min="0" defaultValue="0"></input></label>
+								<label for="strainCurrent" style="padding: 0px 0px 3px 0px;">System Strain current: <input type="number" id="strainCurrent" class="cargo-declared select-medium-number" min="0" defaultValue="0"></input></label>
+							</li>
+						</ul>
+						<ul class="ship-manifest-menu">
 							<li class="ship-manifest-item">
-								<label for="silh" id="silhLabel">
-									Silhouette: <input type="number" id="silh" max="10" maxlength="2" min="0" defaultValue="4"><span id="silh5plus"></span></input>
+								<label for="speedCurrent" style="padding: 0px 0px 3px 0px;">Current Speed: <input type="number" id="speedCurrent" class="cargo-declared select-medium-number" min="0" defaultValue="0"></input></label>
+								<label for="shipSilhouette" id="silhLabel">Silhouette:&nbsp;
+									<select id="shipSilhouette" class="select-short-number">
+										<option value="0">0</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4" selected="true">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+									</select>
 								</label>
+								<span id="silh5plus" class="align-right"></span>
 							</li>
 							<li class="ship-manifest-item">
-								<label for="hyperdrive">
-									Hyperdrive: Class <input type="number" id="hyperdrive" max="20" maxlength="2" min="1" defaultValue="15"></input>
+								<label for="hyperdriveClass">Hyperdrive: Class&nbsp;
+									<select id="hyperdriveClass" class="select-short-number">
+										<option value="0.5">0.5</option>
+										<option value="1" selected="true">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+										<option value="11">11</option>
+										<option value="12">12</option>
+										<option value="13">13</option>
+										<option value="14">14</option>
+										<option value="15">15</option>
+									</select>
 								</label>
 							</li>
-							<li class="ship-manifest-item">
-								<label for="cargo">Cargo Declared: <input type="number" id="cargo" min="0" defaultValue="0"></input>cr</label>
+							<li class="ship-manifest-item" style="padding: 2px 5px 0px 10px;">
+								<label for="cargoDeclared" style="padding: 0px 0px 3px 0px;">Cargo Declared: <input type="number" id="cargoDeclared" class="cargo-declared select-medium-number" min="0" defaultValue="0"></input>cr</label>
 							</li>
 							<li class="ship-manifest-item secret-manifest-item">
 								<label for="pirateHolonet">Pirate HoloNet: <input type="checkbox" id="pirateHolonet"></input></label>
+								<label for="cargoHidden" style="padding: 0px 0px 3px 0px;">Cargo Hidden: <input type="number" id="cargoHidden" class="cargo-declared select-medium-number" min="0" defaultValue="0"></input>cr</label>
 							</li>
 						</ul>
 						<span class="tooltiptext">
@@ -241,51 +247,54 @@
 		</tr>
 	</table>
 
+	<!-- Local Regulations -->
 	<table border="2" width="100%">
-		<tr><!-- Imperial Presence -->
-			<td class="align-top">
-				<div class="local-customs-box tooltip">
-					<span class="tooltiptext">
-					Last reported starport fees for this location. Consult your Game Master.
-					</span>
-					<h3 class="local-customs-box-header">Starport <span id="starportHeader"></span></h3>
-					<strong>Landing Fee:</strong> <span id="textFeePortLanding" class="smaller"></span><br/>
-					<strong>Berthing Fee (per day):</strong> <span id="textFeePortBerthing" class="smaller"></span><br/>
-					<strong>Customs Fee:</strong> <span id="textFeeCustoms" class="smaller"></span><br/>
-					<strong>Visitation Fee:</strong> <span id="textFeeVisitation" class="smaller"></span><br/>
-					<strong>Departure Wait:</strong> <span id="textWaitDeparture" class="smaller"></span><br/>
-					<center><strong>Smuggling Penalty: Confiscation + 20% contraband value</span></center>
-				</div>
-				<div class="local-customs-box tooltip">
-					<span class="tooltiptext">
-					Last reported local restrictions on weapons and armor at this location. Consult your Game Master.
-					</span>
-					<h3 class="local-customs-box-header">Weapon Permits</h3>
-					<strong>Concealed:</strong> <span id="textPermitWeaponConcealed" class="smaller"></span><br/>
-					<strong>Small Arms:</strong> <span id="textPermitWeaponSmall" class="smaller"></span><br/>
-					<strong>Rifles, Large Melee:</strong> <span id="textPermitWeaponRifle" class="smaller"></span><br/>
-					<strong>Heavy Weapons:</strong> <span id="textPermitWeaponHeavy" class="smaller"></span><br/>
-					<strong>Light Armor:</strong> <span id="textPermitArmorLight" class="smaller"></span><br/>
-					<strong>Power Armor:</strong> <span id="textPermitArmorPower" class="smaller"></span><br/>
-					<center><strong>Violations: Confiscation + 200% of permit fee</strong><br/></center>
-				</div>
-				<div class="local-customs-box tooltip">
-					<span class="tooltiptext">
-					Last reported local laws for this location. Consult your Game Master.
-					</span>
-					<h3 class="local-customs-box-header">Contraband</h3>
-					<strong>Spice:</strong> <span id="textLawSpice" class="smaller"></span><br/>
-					<strong>Trespassing:</strong> <span id="textLawTrespassing" class="smaller"></span><br/>
-					<strong>Military Gear:</strong> <span id="textLawMilitary" class="smaller"></span><br/>
-					<strong>Slicing:</strong> <span id="textLawSlicing" class="smaller"></span><br/>
-					<strong>Criticism of the Empire:</strong> <span id="textLawCriticism" class="smaller"></span><br/>
-					<strong>Slavery:</strong> <span id="textLawSlavery" class="smaller"></span><br/>
-					<strong>Minor Theft:</strong> <span id="textLawTheft" class="smaller"></span><br/>
-					<strong>Bribery:</strong> <span id="textLawBribery" class="smaller"></span>
-				</div>
-			</td>
+		<tr style="display: table-cell;">
+			<div class="local-customs-box tooltip">
+				<span class="tooltiptext">
+				Last reported starport fees for this location. Consult your Game Master.
+				</span>
+				<h3 class="local-customs-box-header">Starport</h3>
+				<strong><center><span id="starportHeader"></span></center></strong>
+				<strong>Landing Fee:</strong> <span id="textFeePortLanding"></span><br/>
+				<strong>Berthing Fee (per day):</strong> <span id="textFeePortBerthing"></span><br/>
+				<strong>Customs Fee:</strong> <span id="textFeeCustoms"></span><br/>
+				<strong>Repairs (per HT/Component):</strong> <span id="textFeeRepairs"></span><br/>
+				<strong>Visitation Fee:</strong> <span id="textFeeVisitation"></span><br/>
+				<strong>Departure Wait:</strong> <span id="textWaitDeparture"></span><br/>
+				<strong>Smuggling Penalty<i>/Bribe</i>:</strong> <span id="textSmugglingPenalty"></span><br/>
+				<strong>Local Rarity:</strong> <span id="textRarityMod"></span><br/>
+			</div>
+			<div class="local-customs-box tooltip">
+				<span class="tooltiptext">
+				Last reported local restrictions on weapons and armor at this location. Consult your Game Master.
+				</span>
+				<h3 class="local-customs-box-header">Weapon Permits</h3>
+				<strong>Concealed:</strong> <span id="textPermitWeaponConcealed"></span><br/>
+				<strong>Small Arms:</strong> <span id="textPermitWeaponSmall"></span><br/>
+				<strong>Rifles, Large Melee:</strong> <span id="textPermitWeaponRifle"></span><br/>
+				<strong>Heavy Weapons:</strong> <span id="textPermitWeaponHeavy"></span><br/>
+				<strong>Light Armor:</strong> <span id="textPermitArmorLight"></span><br/>
+				<strong>Power Armor:</strong> <span id="textPermitArmorPower"></span><br/>
+				<strong>Violations Penalty<i>/Bribe</i>:</strong> <span id="textWeaponPenalty"></span><br/>
+			</div>
+			<div class="local-customs-box tooltip">
+				<span class="tooltiptext">
+				Last reported local laws for this location. Consult your Game Master.
+				</span>
+				<h3 class="local-customs-box-header">Contraband</h3>
+				<strong>Spice:</strong> <span id="textLawSpice"></span><br/>
+				<strong>Trespassing:</strong> <span id="textLawTrespassing"></span><br/>
+				<strong>Military Gear:</strong> <span id="textLawMilitary"></span><br/>
+				<strong>Slicing:</strong> <span id="textLawSlicing"></span><br/>
+				<strong>Criticism of the Empire:</strong> <span id="textLawCriticism"></span><br/>
+				<strong>Slavery:</strong> <span id="textLawSlavery"></span><br/>
+				<strong>Minor Theft:</strong> <span id="textLawTheft"></span><br/>
+				<strong>Bribery:</strong> <span id="textLawBribery"></span>
+			</div>
+			<!-- Local Rumors -->
 			<td class="local-events align-top">
-				<h4 class="local-customs-box-header font-starwars">Local Events reported at <span id="local-eventsLocation">your location</span></h4>
+				<h4 class="local-customs-box-header font-starwars">Local Rumors reported at <span id="localEventsLocation">your location</span></h4>
 				<div class="tooltip">
 					<span class="tooltiptext">
 					See the Suggested Usage below. These are all SUGGESTIONS to enhance the story. Nothing is required.
@@ -294,7 +303,8 @@
 						<center>(select a Location at top left)</center>
 					</ul><!-- populated dynamically -->
 				</div>
-				<div id="instructions-box" class="instructions-box font-starwars tooltip"><strong>Suggested Usage:</strong>
+				<div id="instructions-box" class="instructions-box font-starwars tooltip">
+					<strong>Suggested Usage:</strong>
 					<span class="tooltiptext">
 					First step is to choose a Location (not Destination) from the dropdown at top left.<br/>
 					This populates the details for that location and some random local events which can be optionally chosen.<br/>
@@ -313,110 +323,35 @@
 						<li>The GM may, at their discretion, not allow NPCs or events to be found in locations where it doesn't make sense.</li>
 						<li>Upon system arrival, and after the party has chosen whether to select any events initially, the GM may activate or negate up to one <span class="local-event-destiny-required">Destiny Required Event</span> (spending a Destiny point if so), and as many <span class="local-event-free">Free Events</span> at no cost as needed for a good story.</li>
 						<li><span class="highlight">Highlighted</span> data indicates to the GM and to the PCs that <span class="font-normal starwars-dice boost">b</span>oosts and <span class="font-normal starwars-dice setback">s</span>etbacks are possible consequences of this local event or location description.
-						<li>Wondering what a "hot plook" is? It's the latest food craze sweeping the galaxy. Sometimes people mispronounce it. Seems like every time you're waiting in line for another wet bag of <em><i>h</i></em>ot <em><i>pl</i></em>ook, some shady Game Master sidles up to you and offers you a job, or a mission, or a chance to save the galaxy. Whatever you choose, it will probably be a good story to tell at your funeral.</li>
+						<!-- li>Wondering what a "hot plook" is? It's the latest food craze sweeping the galaxy. Sometimes people mispronounce it. Seems like every time you're waiting in line for another wet bag of <em><i>h</i></em>ot <em><i>pl</i></em>ook, some shady Game Master sidles up to you and offers you a job, or a mission, or a chance to save the galaxy. Whatever you choose, it will probably be a good story to tell at your funeral.</li -->
 						<li>Expect Imperial presence to be higher near the Core, and weapons laws to be looser nearer or past the Outer Rim.</li>
 						<li>Capital Ships (silhouette 5+) pay substantially higher Starport costs.</li>
 						<li>Upon departure, all local events and NPCs not made permanent via Destiny Points are reset.</li>
-						<li><em>Select a Destination</em> (top right) to display details and estimated travel statistics to that system. Hyperdrive class impacts this heavily, as does the number and quality of Hyperlanes available at this location.</li>
+						<li><em>Select a Destination</em> in the Astrogation Computer to display details and estimated travel statistics to that system. Hyperdrive class impacts this heavily, as does the number and quality of Hyperlanes available at this location.</li>
 					</ul>
+					<div>
+						<span class="align-right" style="display: contents; font-size: smaller;>
+							<label for="galacticHyperspaceConstant">Galactic Hyperspace Constant&nbsp;
+							<select id="galacticHyperspaceConstant" style="width: fit-content; font-size: smaller;">
+								<option value="0.01">0.01</option>
+								<option value="0.1">0.1</option>
+								<option value="0.25">0.25</option>
+								<option value="0.5">0.5</option>
+								<option value="1" selected="true">1.0</option>
+								<option value="2.5">2.5</option>
+								<option value="5">5.0</option>
+								<option value="10">10.0</option>
+							</select>
+						</span>
+					</div>
 				</div>
 			</td>
 		</tr>
 	</table>
-
-	<script>
-
-		function updateSilhouette()
-		{
-			shipSilh = $('#silh').val();
-
-			if (shipSilh > 4) // Commercial/Military size
-			{
-				$('#silhLabel').addClass("silhouette-5-plus");
-			}
-			else
-			{
-				$('#silhLabel').removeClass("silhouette-5-plus");
-			}
-
-			updateLocalCustoms();
-		}
-
-		$(document).ready(function () {
-			switchFontBesh(); // set initial font
-
-			// minimize collapsible sections
-			$("#locationDetails").slideUp();
-			$("#destinationDetails").slideUp();
-			$("#manifest-menu-hidden").slideUp();
-			$(".hidden").slideUp();
-
-			// Default input values
-			$('#cargo').val(0);
-			$('#silh').val(4);
-			$('#hyperdrive').val(15);
-
-			populateLocationDropdown();
-			populateDestinationDropdown();
-
-			// Location dropdown events
-			$("#locationDropdown").on("change", function () {
-				$("#locationDetails").slideDown(); // display current location details
-				switchFontNormal(); // reset font-family
-
-				const currentLocation = $("#locationDropdown").val();
-				currentLoc = locations.find(item => item.Name === currentLocation); // JSON object
-				currentRegion = regions.find(region => region.Name === currentLoc.Region); // JSON object
-				$('#local-eventsLocation').text(currentLocation);
-
-				updateCurrentDetails();
-
-				updateLocalCustoms();
-
-				updateTravelEstimates();
-
-				updateLocalEvents();
-			});
-
-			// Destination dropdown events
-			$("#destinationDropdown").on("change", function () {
-				$("#destinationDetails").slideDown();
-				switchFontNormal(); // reset font-family
-
-				currentDestination = $("#destinationDropdown").val();
-				destLoc = locations.find(item => item.Name === currentDestination); // JSON object
-				destRegion = regions.find(region => region.Name === destLoc.Region); // JSON object
-
-				updateDestDetails();
-
-				updateTravelEstimates();
-
-				updateDestDetails();
-			});
-
-			// On Change event for Ship Silhouette
-			document.getElementById("silh").addEventListener("change", updateSilhouette);
-
-			// On Change event for Hyperdrive Class
-			document.getElementById("hyperdrive").addEventListener("change", updateTravelEstimates);
-
-			// On Change event for Declared Cargo
-
-			// On Change event for Undeclared Cargo
-
-			// On Change event for Pirate Holonet
-			document.getElementById("pirateHolonet").addEventListener("change", togglePirateHolonet);
-
-			// On Change event for dropdown filters
-
-			// General update of everything
-			$("input").change(function() {
-				populateLocationDropdown();
-				populateDestinationDropdown();
-			});
-		});
-	</script>
-
+	<div display="inline">
+		<span class="payme-link"><a href="https://buymeacoffee.com/1gquRzpXr" target="_blank">if you find this helpful</a></span>
+		<span id="helpButton" style="float: right;" onclick="toggleHelp()">help</span>
+	</div>
 </body>
 
 </html>

@@ -43,7 +43,7 @@ const locations = [
 	"Inhabitants": "Killik,Humans",
 	"CapitalCity": "Aldera",
 	"URL": "https://starwars.fandom.com/wiki/Alderaan",
-	"Starport": 2, // population 2 billion
+	"Starport": 4, // population 2 billion; important Core World planet
 	"Shadowport": false,
 	"BlackMarket": false,
 	"Precipitation": 2,
@@ -211,6 +211,36 @@ const locations = [
 	"Bribery": 0,
 },
 {
+	"Name": "Annaj",
+	"Region": "Outer Rim",
+	"Sector": "Zuma",
+	"System": "Annaj",
+	"Map": "H-16",
+	"Atmosphere": "Type I",
+	"Climate": "temperate",
+	"Terrain": "forests,plains,<span class='highlight'>swamps</span>,lakes,<span class='highlight'>dense fog</span>",
+	"Gravity": 1.0,
+	"Inhabitants": "Ayrou,Humans",
+	"Starport": 3, // population 400 million; intersection of two hyperlanes
+	"Shadowport": false,
+	"BlackMarket": false,
+	"CapitalCity": "starport",
+	"URL": "https://starwars.fandom.com/wiki/Annaj/Legends",
+	"Precipitation": 2, // forests,swamps
+	"ImperialPresence": 3, // Imperial Navy staging center, sector capital
+	"OldWestiness": 0,
+	"Megafauna": 0,
+	"Rarity": 0,
+	"Criticism": 0,
+	"Slavery": 0,
+	"Spice": 0,
+	"Trespassing": 0,
+	"Military": 0,
+	"Slicing": 0,
+	"Theft": 0,
+	"Bribery": 0,
+},
+{
 	"Name": "Anoat",
 	"Region": "Outer Rim",
 	"Sector": "Anoat",
@@ -218,7 +248,7 @@ const locations = [
 	"Map": "K-18",
 	"Atmosphere": "Type II",
 	"Climate": "<span class='highlight'>hot</span>",
-	"Terrain": "<span class='highlight'><span class='highlight'><span class='highlight'>polluted</span></span></span> <span class='highlight'>sludge</span>,<span class='highlight'>urban</span> <span class='highlight'>wasteland</span>",
+	"Terrain": "<span class='highlight'>polluted</span> <span class='highlight'>sludge</span>,<span class='highlight'>urban</span> <span class='highlight'>wasteland</span>",
 	"Gravity": 0.85,
 	"Inhabitants": "Humans,Ugnaughts",
 	"Starport": 1, // population 1 million
@@ -871,6 +901,36 @@ const locations = [
 	"Bribery": 0,
 },
 {
+	"Name": "City Of Masks",
+	"Region": "Expansion Region",
+	"Sector": "Thaere",
+	"System": "Genarius",
+	"Map": "P-14",
+	"Atmosphere": "Type I",
+	"Climate": "controlled",
+	"Gravity": 1,
+	"Terrain": "floating city,<span class=\"highlight\">asteroid</span> field",
+	"Inhabitants": "(varied)",
+	"CapitalCity": "City Of Masks",
+	"URL": "https://starwars.fandom.com/wiki/Depatar/Legends",
+	"Starport": 3, // smuggler and black-market spaceport
+	"Shadowport": true, // smuggler and black-market spaceport
+	"BlackMarket": true, // points of interest
+	"Precipitation": 0,
+	"ImperialPresence": -5, // five criminal organizations looking for a neutral ground for secret meetings
+	"OldWestiness": 5, // five criminal organizations looking for a neutral ground for secret meetings
+	"Megafauna": 0,
+	"Rarity": -1, // pirate hideout
+	"Criticism": 5, // pirate hideout
+	"Slavery": 1, // smugglers and pirates
+	"Spice": 1, // smugglers
+	"Trespassing": 1, // smugglers
+	"Military": -1, // commonplace, but permits!
+	"Slicing": 3, // false permits
+	"Theft": 1, // pirate hideout
+	"Bribery": 5, // permits, permits, permits
+},
+{
 	"Name": "Commenor",
 	"Region": "Colonies",
 	"Sector": "The Slice",
@@ -1049,6 +1109,36 @@ const locations = [
 	"Slicing": 0,
 	"Theft": 0,
 	"Bribery": 0,
+},
+{
+	"Name": "Darlyn Boda",
+	"Region": "Outer Rim",
+	"Sector": "Anoat",
+	"System": "Darlyn Boda",
+	"Map": "K-18",
+	"Atmosphere": "Type I",
+	"Climate": "<span class='highlight'>hot</span>,<span class='highlight'>humid</span>, <span class='highlight'>rainy</span>",
+	"Terrain": "<span class='highlight'>jungles</span>,<span class='highlight'>mud pits</span>,ocean",
+	"Gravity": 1.0,
+	"Inhabitants": "Humans,Yarkora",
+	"CapitalCity": "Darlyn Boda city",
+	"URL": "https://starwars.fandom.com/wiki/Darlyn_Boda/Legends",
+	"Starport": 3, // population 200 million; shadowport world
+	"Shadowport": true, // shadowport world
+	"BlackMarket": true, // crime-ridden
+	"Precipitation": 5, // rainy
+	"ImperialPresence": -3, // relative independence from galactic politics
+	"OldWestiness": 5, // hotbed for piracy
+	"Megafauna": 1, // toccats
+	"Rarity": 1, // far from Core
+	"Criticism": 2, // criminal trading world
+	"Slavery": 1, // criminal trading world
+	"Spice": 1, // Deluge spice
+	"Trespassing": 0,
+	"Military": 0,
+	"Slicing": 0,
+	"Theft": 1, // criminal trading world
+	"Bribery": 2, // criminal trading world
 },
 {
 	"Name": "Dathomir",
@@ -1801,6 +1891,36 @@ const locations = [
 	"Bribery": 0,
 },
 {
+	"Name": "Gerrenthum",
+	"Region": "Outer Rim",
+	"Sector": "Javin",
+	"System": "Gerrenthum",
+	"Map": "K-18",
+	"Atmosphere": "Type I",
+	"Climate": "temperate",
+	"Terrain": "<span class='highlight'>urban</span>",
+	"Gravity": 1.0,
+	"Inhabitants": "Humans,Nothoiins,Lutrillians,Mugaari",
+	"CapitalCity": "orbital security station",
+	"URL": "https://starwars.fandom.com/wiki/Gerrenthum/Legends",
+	"Starport": 5, // population 5 billion; thousands of starships every hour
+	"Shadowport": false,
+	"BlackMarket": false,
+	"Precipitation": 0,
+	"ImperialPresence": 1, // sector capital
+	"OldWestiness": 0,
+	"Megafauna": 0,
+	"Rarity": -1, // sector capital
+	"Criticism": -1, // sector capital
+	"Slavery": 0,
+	"Spice": 0,
+	"Trespassing": -1, // tight security for the Figg family
+	"Military": -2, // tight security for the Figg family
+	"Slicing": -2, // tight security for the Figg family
+	"Theft": -2, // tight security for the Figg family
+	"Bribery": 5, // openly bribed Imperials to ignore their illegal activities
+},
+{
 	"Name": "Ghorman",
 	"Region": "Colonies",
 	"Sector": "Sern",
@@ -2011,6 +2131,36 @@ const locations = [
 	"Bribery": 0,
 },
 {
+	"Name": "Ivax Nebula",
+	"Region": "Outer Rim",
+	"Sector": "Greater Javin",
+	"System": "(nebula)",
+	"Map": "K-18",
+	"Atmosphere": "(nebula)",
+	"Climate": "(nebula)",
+	"Terrain": "<span class='highlight'>nebula</span>",
+	"Gravity": 0,
+	"Inhabitants": "(none)",
+	"CapitalCity": "(none)",
+	"URL": "https://starwars.fandom.com/wiki/Ivax_Nebula/Legends",
+	"Starport": 0,
+	"Shadowport": false,
+	"BlackMarket": false,
+	"Precipitation": 0,
+	"ImperialPresence": -5, // nebula
+	"OldWestiness": 5, // nebula
+	"Megafauna": 5, // nebula
+	"Rarity": 5,  // nebula
+	"Criticism": 0,
+	"Slavery": 0,
+	"Spice": 0,
+	"Trespassing": 0,
+	"Military": 0,
+	"Slicing": 0,
+	"Theft": 0,
+	"Bribery": 0,
+},
+{
 	"Name": "Jakku",
 	"Region": "Inner Rim",
 	"Sector": "Jakku's",
@@ -2161,6 +2311,36 @@ const locations = [
 	"Bribery": 0,
 },
 {
+	"Name": "Karkaris",
+	"Region": "Outer Rim",
+	"Sector": "Nilgaard",
+	"System": "Karkaris",
+	"Map": "S-5",
+	"Atmosphere": "Type I",
+	"Climate": "temperate",
+	"Terrain": "<span class='highlight'>oceans</span>",
+	"Gravity": 1.0,
+	"Inhabitants": "Karkarodons",
+	"CapitalCity": "sprawling, decentralized cities",
+	"URL": "https://starwars.fandom.com/wiki/Karkaris/Legends",
+	"Starport": 1, // uninterested in galactic politics
+	"Shadowport": false,
+	"BlackMarket": false,
+	"Precipitation": 1,
+	"ImperialPresence": 0,
+	"OldWestiness": 0,
+	"Megafauna": 3, // oceanic
+	"Rarity": 0,
+	"Criticism": 0,
+	"Slavery": 0,
+	"Spice": 0,
+	"Trespassing": 0,
+	"Military": 0,
+	"Slicing": 0,
+	"Theft": 0,
+	"Bribery": 0,
+},
+{
 	"Name": "Kashyyyk",
 	"Region": "Mid Rim",
 	"Sector": "Mytaranor",
@@ -2247,6 +2427,36 @@ const locations = [
 	"Trespassing": -1, // Imperial prison
 	"Military": -1, // Imperial prison
 	"Slicing": -1, // Imperial prison
+	"Theft": 0,
+	"Bribery": 0,
+},
+{
+	"Name": "Kiax Nebula",
+	"Region": "Outer Rim",
+	"Sector": "Yarth",
+	"System": "(nebula)",
+	"Map": "J-18",
+	"Atmosphere": "(nebula)",
+	"Climate": "(nebula)",
+	"Terrain": "<span class='highlight'>nebula</span>",
+	"Gravity": 0,
+	"Inhabitants": "(none)",
+	"CapitalCity": "(none)",
+	"URL": "https://starwars.fandom.com/wiki/Kiax_Nebula/Legends",
+	"Starport": 0,
+	"Shadowport": false,
+	"BlackMarket": false,
+	"Precipitation": 0,
+	"ImperialPresence": -5, // nebula
+	"OldWestiness": 5, // nebula
+	"Megafauna": 5, // nebula
+	"Rarity": 5,  // nebula
+	"Criticism": 0,
+	"Slavery": 0,
+	"Spice": 0,
+	"Trespassing": 0,
+	"Military": 0,
+	"Slicing": 0,
 	"Theft": 0,
 	"Bribery": 0,
 },
@@ -2426,6 +2636,66 @@ const locations = [
 	"Spice": 0,
 	"Trespassing": 0,
 	"Military": 0,
+	"Slicing": 0,
+	"Theft": 0,
+	"Bribery": 0,
+},
+{
+	"Name": "Koboh",
+	"Region": "Outer Rim",
+	"Sector": "Varada",
+	"System": "Koboh",
+	"Map": "H-19",
+	"Atmosphere": "Type I",
+	"Climate": "temperate",
+	"Terrain": "<span class='highlight'>rugged cliffs</span>",
+	"Gravity": 1,
+	"Inhabitants": "(varied)",
+	"CapitalCity": "Rambler's Reach Outpost",
+	"URL": "https://starwars.fandom.com/wiki/Koboh",
+	"Starport": 2, // sizable landing pad
+	"Shadowport": true, // network of smuggler's tunnels
+	"BlackMarket": true, // network of smuggler's tunnels
+	"Precipitation": 0,
+	"ImperialPresence": 1, // a post on the planet
+	"OldWestiness": 3, // inspiration from the American Old West
+	"Megafauna": 4, // gorgers & rawka & shiverpedes, oh my!
+	"Rarity": 2, // edge of civilized space
+	"Criticism": 0,
+	"Slavery": 0,
+	"Spice": 0,
+	"Trespassing": 0,
+	"Military": 0,
+	"Slicing": 0,
+	"Theft": 0,
+	"Bribery": 0,
+},
+{
+	"Name": "Koda Space Station",
+	"Region": "Outer Rim",
+	"Sector": "Wazta",
+	"System": "Koda",
+	"Map": "I-18",
+	"Atmosphere": "Type I",
+	"Climate": "controlled",
+	"Terrain": "space station",
+	"Gravity": 1.0,
+	"Inhabitants": "(varied)",
+	"CapitalCity": "The End Of The World tavern",
+	"URL": "https://starwars.fandom.com/wiki/Koda_Space_Station",
+	"Starport": 2, // spacedock
+	"Shadowport": true, // smugglers
+	"BlackMarket": true, // smugglers
+	"Precipitation": -5, // climate controlled space station
+	"ImperialPresence": 0,
+	"OldWestiness": 0,
+	"Megafauna": -5, // space station
+	"Rarity": 1, // backwater corner of the Outer Rim Territories
+	"Criticism": 0,
+	"Slavery": 0,
+	"Spice": 1, // farmers visit for excitement
+	"Trespassing": 0,
+	"Military": -1, // farmers visit for excitement
 	"Slicing": 0,
 	"Theft": 0,
 	"Bribery": 0,
@@ -2641,6 +2911,36 @@ const locations = [
 	"Bribery": 3, // Governor Blithane
 },
 {
+	"Name": "Lok",
+	"Region": "Outer Rim",
+	"Sector": "Karthakk",
+	"System": "Karthakk",
+	"Map": "Q-17",
+	"Atmosphere": "Type I",
+	"Climate": "<span class='highlight'>arid</span>",
+	"Terrain": "<span class='highlight'>deserts</span>,<span class='highlight'>sulphur pools</span>,<span class='highlight'>mountains</span>,<span class='highlight'>lava lands</span>",
+	"Gravity": 1.0,
+	"Inhabitants": "Humans,(varied)",
+	"CapitalCity": "Nym's Stronghold",
+	"URL": "https://starwars.fandom.com/wiki/Lok/Legends",
+	"Starport": 4, // population 300 million; 2 stellar class & 4 limited services
+	"Shadowport": true, // pirate world
+	"BlackMarket": true, // pirate world
+	"Precipitation": -3, // deserts, sulphur pools, lava lands
+	"ImperialPresence": -5, // pirate world
+	"OldWestiness": 5, // pirate world
+	"Megafauna": 1, // beware of dangerous beasts, pirates, confusing mazes and a volcano; kimogila
+	"Rarity": -1, // pirate world
+	"Criticism": 5, // pirate world
+	"Slavery": 1, // pirate world
+	"Spice": 1, // pirate world
+	"Trespassing": 0,
+	"Military": 1, // pirate world
+	"Slicing": 0,
+	"Theft": 0,
+	"Bribery": 1, // pirate world
+},
+{
 	"Name": "Lothal",
 	"Region": "Outer Rim",
 	"Sector": "Lothal",
@@ -2690,6 +2990,36 @@ const locations = [
 	"ImperialPresence": 0, // neutral
 	"OldWestiness": 0,
 	"Megafauna": 0,
+	"Rarity": 0,
+	"Criticism": 0,
+	"Slavery": 0,
+	"Spice": 0,
+	"Trespassing": 0,
+	"Military": 0,
+	"Slicing": 0,
+	"Theft": 0,
+	"Bribery": 0,
+},
+{
+	"Name": "Lutrillia",
+	"Region": "Outer Rim",
+	"Sector": "Yarith",
+	"System": "Lutrillia",
+	"Map": "J-18",
+	"Atmosphere": "Type I",
+	"Climate": "<span class='highlight'>hot</span>",
+	"Terrain": "<span class='highlight'>barren plains</span>,<span class='highlight'>oases</span>",
+	"Gravity": 1.0,
+	"Inhabitants": "Lutrillians",
+	"CapitalCity": "wheeled equatorial platform-cities",
+	"URL": "https://starwars.fandom.com/wiki/Lutrillia/Legends",
+	"Starport": 2, // population 800 million
+	"Shadowport": false,
+	"BlackMarket": true,
+	"Precipitation": -3, // hot
+	"ImperialPresence": 0,
+	"OldWestiness": 0,
+	"Megafauna": 2, // nippers & chompers
 	"Rarity": 0,
 	"Criticism": 0,
 	"Slavery": 0,
@@ -2790,6 +3120,37 @@ const locations = [
 	"Theft": 0,
 	"Bribery": 0,
 },
+//////////////////////////////////////////////// @TODO: only show if associated with Rebels
+//{
+//	"Name": "Mako-Ta Space Docks",
+//	"Region": "Outer Rim",
+//	"Sector": "Noonian",
+//	"System": "Mako-Ta",
+//	"Map": "M-6",
+//	"Atmosphere": "Type I",
+//	"Climate": "controlled",
+//	"Terrain": "space station,shipyards",
+//	"Gravity": 1,
+//	"Inhabitants": "(varied)",
+//	"CapitalCity": "Botajef Shipyards",
+//	"URL": "https://starwars.fandom.com/wiki/Mako-Ta_Space_Docks",
+//	"Starport": 5, // important Rebel space dock
+//	"Shadowport": true, // Rebel space dock
+//	"BlackMarket": false,
+//	"Precipitation": -5,
+//	"ImperialPresence": -5,
+//	"OldWestiness": 0,
+//	"Megafauna": 0,
+//	"Rarity": -1, // major space dock
+//	"Criticism": 1, // Rebels gonna Rebel
+//	"Slavery": -1, // Rebels are good guys
+//	"Spice": 0,
+//	"Trespassing": 0,
+//	"Military": 0,
+//	"Slicing": 0,
+//	"Theft": 0,
+//	"Bribery": 0,
+//},
 {
 	"Name": "Malador",
 	"Region": "Mid Rim",
@@ -3002,6 +3363,36 @@ const locations = [
 	"Bribery": 0,
 },
 {
+	"Name": "Mijos",
+	"Region": "Outer Rim",
+	"Sector": "Greater Javin",
+	"System": "Mijos",
+	"Map": "K-18",
+	"Atmosphere": "Type I",
+	"Climate": "temperate",
+	"Terrain": "<span class='highlight'>swamps</span>",
+	"Gravity": 1,
+	"Inhabitants": "Lutrillians",
+	"CapitalCity": "spaceport",
+	"URL": "https://starwars.fandom.com/wiki/Mijos/Legends",
+	"Starport": 2, // many, but sinking into the swamp due to poor engineering
+	"Shadowport": false,
+	"BlackMarket": false,
+	"Precipitation": 1,
+	"ImperialPresence": -1, // Iron Blockade
+	"OldWestiness": 4, // swamps
+	"Megafauna": 2, // savage beasts
+	"Rarity": 0,
+	"Criticism": 1, // drove many Morseerians to clandestinely support the Alliance
+	"Slavery": 0,
+	"Spice": 0,
+	"Trespassing": 0,
+	"Military": 0,
+	"Slicing": 0,
+	"Theft": 0,
+	"Bribery": 0,
+},
+{
 	"Name": "Mon Cala (Dac)",
 	"Region": "Outer Rim",
 	"Sector": "Calamari",
@@ -3089,6 +3480,66 @@ const locations = [
 	"Military": 1, // <span class='highlight'>lava</span> world
 	"Slicing": 0,
 	"Theft": 0,
+	"Bribery": 0,
+},
+{
+	"Name": "Maya Kovel",
+	"Region": "Outer Rim",
+	"Sector": "Zuma",
+	"System": "Maya Kovel",
+	"Map": "H-16",
+	"Atmosphere": "Type II",
+	"Climate": "temperate,<span class='highlight'>stormy</span>",
+	"Terrain": "<span class='highlight'>desert</span>,<span class='highlight'>rift valleys</span>",
+	"Gravity": 0.90,
+	"Inhabitants": "Ayrou,Humans,Vashans",
+	"CapitalCity": "Spaceports",
+	"URL": "https://starwars.fandom.com/wiki/Maya_Kovel/Legends",
+	"Starport": 4, // population 300 million; 2 stellar class & 4 limited services
+	"Shadowport": false,
+	"BlackMarket": false,
+	"Precipitation": -5, // desert; local moss grows in little moisture
+	"ImperialPresence": -5, // pacifists
+	"OldWestiness": -5, // pacifists
+	"Megafauna": 0,
+	"Rarity": 0,
+	"Criticism": 0,
+	"Slavery": 0,
+	"Spice": 0,
+	"Trespassing": 0,
+	"Military": -5, // pacifists
+	"Slicing": 0,
+	"Theft": 0,
+	"Bribery": 0,
+},
+{
+	"Name": "Naboo",
+	"Region": "Mid Rim",
+	"Sector": "Chommell",
+	"System": "Naboo",
+	"Map": "O-17",
+	"Atmosphere": "Type I",
+	"Climate": "temperate",
+	"Terrain": "urban,grassy plains,<span class='highlight'>swamps</span>,grassy hills,forests,mountains,<span class='highlight'>abyssal labyrinths</span>",
+	"Gravity": 1.0,
+	"Inhabitants": "Gungan,Human",
+	"CapitalCity": "Theed (Human),Otoh Gunga (Gungan)",
+	"URL": "https://starwars.fandom.com/wiki/Naboo/Legends",
+	"Starport": 4, // population 4.5 billion; Kwilaan Starport
+	"Shadowport": false,
+	"BlackMarket": false,
+	"Precipitation": 0,
+	"ImperialPresence": 2, // sector capital; standing military; Palpatine's homeworld
+	"OldWestiness": -4, // tourism; peaceful, enlightened, and artistic
+	"Megafauna": 3, // colo claw fish & opee sea killers & sando aqua monsters, oh my!
+	"Rarity": 0,
+	"Criticism": -3, // sector capital; standing military; Palpatine's homeworld
+	"Slavery": -1, // tourism
+	"Spice": 0,
+	"Trespassing": -1, // tourism
+	"Military": -3, // tourism; peaceful, enlightened, and artistic
+	"Slicing": 0,
+	"Theft": -1, // tourism
 	"Bribery": 0,
 },
 {
@@ -3872,6 +4323,66 @@ const locations = [
 	"Bribery": 2, // bureaucrats
 },
 {
+	"Name": "Ring of Kafrene",
+	"Region": "Expansion Region",
+	"Sector": "Thand",
+	"System": "Kafrene",
+	"Map": "J-15",
+	"Atmosphere": "Type I",
+	"Climate": "controlled",
+	"Terrain": "<span class='highlight'>asteroid belt</span>,<span class='highlight'>asteroid mines</span>,<span class='highlight'>graffiti slums</span>",
+	"Gravity": 0,
+	"Inhabitants": "(varied)",
+	"CapitalCity": "The Den,Section Nine",
+	"URL": "https://starwars.fandom.com/wiki/Ring_of_Kafrene",
+	"Starport": 3, // monumental construction; mining colony and deep space trading post
+	"Shadowport": true, // deep space trading post
+	"BlackMarket": true, // deep space trading post
+	"Precipitation": 0,
+	"ImperialPresence": 2, // maintained a presence on Kafrene, and Imperial stormtroopers patrolled its streets
+	"OldWestiness": 2, // failed mining colony, now trading post for desperate travelers
+	"Megafauna": 1,
+	"Rarity": 1, // deep space
+	"Criticism": -1, // Imperial presence
+	"Slavery": 0,
+	"Spice": 0,
+	"Trespassing": 0,
+	"Military": 0,
+	"Slicing": 0,
+	"Theft": 0,
+	"Bribery": 0,
+},
+{
+	"Name": "Rion",
+	"Region": "Outer Rim",
+	"Sector": "Kessel",
+	"System": "Rion",
+	"Map": "T-10",
+	"Atmosphere": "Type I",
+	"Climate": "<span class='highlight'>tropical</span>,humid",
+	"Terrain": "<span class='highlight'>rainforest</span>",
+	"Gravity": 1,
+	"Inhabitants": "Aqualish,Arcona,Duros,Gands,H'nemthe,Humans,Ithorians,Twi'leks",
+	"CapitalCity": "Tana's Resort",
+	"URL": "https://starwars.fandom.com/wiki/Rion/Legends",
+	"Starport": 2, // population unstated but many species
+	"Shadowport": false,
+	"BlackMarket": false,
+	"Precipitation": 5,
+	"ImperialPresence": 0,
+	"OldWestiness": -5, // paradise with friendly inhabitants
+	"Megafauna": 0, // paradise with friendly inhabitants
+	"Rarity": 0,
+	"Criticism": 0,
+	"Slavery": -1, // paradise with friendly inhabitants
+	"Spice": 0,
+	"Trespassing": -1, // paradise with friendly inhabitants
+	"Military": -3, // paradise with friendly inhabitants
+	"Slicing": 0,
+	"Theft": -1, // paradise with friendly inhabitants
+	"Bribery": 0,
+},
+{
 	"Name": "Rodia",
 	"Region": "Outer Rim",
 	"Sector": "Savareen",
@@ -4142,6 +4653,36 @@ const locations = [
 	"Bribery": 0,
 },
 {
+	"Name": "Shuldene",
+	"Region": "Outer Rim",
+	"Sector": "Yarith",
+	"System": "Shuldene",
+	"Map": "J-18",
+	"Climate": "<span class='highlight'>frozen/span>",
+	"Atmosphere": "Type I",
+	"Terrain": "<span class='highlight'>frozen oceans</span>",
+	"Gravity": 1,
+	"Inhabitants": "(varied)",
+	"CapitalCity": "(none)",
+	"URL": "https://starwars.fandom.com/wiki/Shuldene/Legends",
+	"Starport": 1, // frozen; tourists
+	"Shadowport": false,
+	"BlackMarket": false,
+	"Precipitation": 0,
+	"ImperialPresence": -5, // no permanent inhabitants
+	"OldWestiness": 5, // frozen; tourists
+	"Megafauna": 0,
+	"Rarity": 2, // no permanent inhabitants
+	"Criticism": 5,  // no permanent inhabitants
+	"Slavery": 0,
+	"Spice": 0,
+	"Trespassing": 5,  // no permanent inhabitants
+	"Military": 0,
+	"Slicing": 0,
+	"Theft": 0,
+	"Bribery": 0,
+},
+{
 	"Name": "Sirpar",
 	"Region": "Outer Rim",
 	"Sector": "Arkanis",
@@ -4209,7 +4750,7 @@ const locations = [
 	"Map": "M-20",
 	"Atmosphere": "Type I",
 	"Climate": "temperate",
-	"Terrain": "bluff,canyon,<span class='highlight'>caverns</span>,city,<span class='highlight'>desert</span>,flatland,forest,grassland,hill,<span class='highlight'>ice</span> canyons,<span class='highlight'>ice caps</span>,<span class='highlight'>ice caverns</span>,<span class='highlight'>ice grottos</span>,<span class='highlight'>ice</span> plains,<span class='highlight'>industrial</span>,island,<span class='highlight'>isolated</span> forest,<span class='highlight'>jungle</span>,lake,marshland,mesa,<span class='highlight'>mountains</span>,ocean,plains,plateau,<span class='highlight'><span class='highlight'>primitive</span></span> villages,<span class='highlight'>rainforest</span>,river,<span class='highlight'>rocky</span>,<span class='highlight'>salt marsh</span>,saltwater ocean,savannah,sea,<span class='highlight'>snowfield</span>,<span class='highlight'>swamp</span>,<span class='highlight'>tundra</span>,<span class='highlight'>urban</span>,valley,village,<span class='highlight'>volcanic</span>,<span class='highlight'>wasteland</span>,woodland",
+	"Terrain": "bluffs,canyon,<span class='highlight'>caverns</span>,city,<span class='highlight'>desert</span>,flatland,forest,grassland,hill,<span class='highlight'>ice</span> canyons,<span class='highlight'>ice caps</span>,<span class='highlight'>ice caverns</span>,<span class='highlight'>ice grottos</span>,<span class='highlight'>ice</span> plains,<span class='highlight'>industrial</span>,island,<span class='highlight'>isolated</span> forest,<span class='highlight'>jungle</span>,lake,marshland,mesa,<span class='highlight'>mountains</span>,ocean,plains,plateau,<span class='highlight'><span class='highlight'>primitive</span></span> villages,<span class='highlight'>rainforest</span>,river,<span class='highlight'>rocky</span>,<span class='highlight'>salt marsh</span>,saltwater ocean,savannah,sea,<span class='highlight'>snowfield</span>,<span class='highlight'>swamp</span>,<span class='highlight'>tundra</span>,<span class='highlight'>urban</span>,valley,village,<span class='highlight'>volcanic</span>,<span class='highlight'>wasteland</span>,woodland",
 	"Gravity": 1,
 	"Inhabitants": "Squibs",
 	"CapitalCity": "Metrobig",
@@ -4472,6 +5013,36 @@ const locations = [
 	"Bribery": 0,
 },
 {
+	"Name": "Taris",
+	"Region": "Outer Rim",
+	"Sector": "Ojoster",
+	"System": "Taris",
+	"Map": "N-7",
+	"Atmosphere": "Type I",
+	"Climate": "temperate",
+	"Terrain": "<span class='highlight'>urban sprawl</span>,<span class='highlight'>oceans</span>",
+	"Gravity": 1.0,
+	"Inhabitants": "(varied)",
+	"CapitalCity": "Upper Level, Middle City, Lower City, Undercity",
+	"URL": "https://starwars.fandom.com/wiki/Taris/Legends",
+	"Starport": 5, // population 1 billion; major hyperspace hub; "Coruscant of the Outer Rim"
+	"Shadowport": false,
+	"BlackMarket": false,
+	"Precipitation": 0,
+	"ImperialPresence": 5, // "Coruscant of the Outer Rim"
+	"OldWestiness": -2, // "Coruscant of the Outer Rim"
+	"Megafauna": -5, // ecumenopolis
+	"Rarity": -1, // "Coruscant of the Outer Rim"
+	"Criticism": -2, // "Coruscant of the Outer Rim"
+	"Slavery": 0,
+	"Spice": 0,
+	"Trespassing": -1, // Upper Level
+	"Military": 0,
+	"Slicing": 0,
+	"Theft": 1, // swoop gangs
+	"Bribery": 0,
+},
+{
 	"Name": "Tatooine",
 	"Region": "Outer Rim",
 	"Sector": "Arkanis",
@@ -4479,13 +5050,13 @@ const locations = [
 	"Map": "R-16",
 	"Atmosphere": "Type I",
 	"Climate": "<span class='highlight'>hot</span>,arid",
-	"Terrain": "canyon,<span class='highlight'>desert</span>,<span class='highlight'>mountains</span>,bluff",
+	"Terrain": "canyon,<span class='highlight'>desert</span>,<span class='highlight'>mountains</span>,bluffs",
 	"Gravity": 1,
 	"Inhabitants": "Jawas, Tusken Raiders",
 	"CapitalCity": "Bestine",
-	"URL": "https://starwars.fandom.com/wiki/Tatooine",
+	"URL": "https://starwars.fandom.com/wiki/Tatooine/Legends",
 	"Starport": 2, // population 200k; Mos Eisley
-	"Shadowport": false,
+	"Shadowport": true, // not canon, but it is a wretched hive of scum & villainy
 	"BlackMarket": false,
 	"Precipitation": -5, // desert world
 	"ImperialPresence": 1, // several battalions
@@ -5217,6 +5788,36 @@ const locations = [
 	"Spice": 0,
 	"Trespassing": 0,
 	"Military": -5, // luxury world
+	"Slicing": 0,
+	"Theft": 0,
+	"Bribery": 0,
+},
+{
+	"Name": "Zerm",
+	"Region": "Outer Rim",
+	"Sector": "Kessel",
+	"System": "Zerm",
+	"Map": "T-10",
+	"Atmosphere": "Type I",
+	"Climate": "<span class='highlight'>tropical</span>,<span class='highlight'>weird weather</span>,<span class='highlight'>killer storms</span>",
+	"Terrain": "farmland,<span class='highlight'>rainforests</span>",
+	"Gravity": 1,
+	"Inhabitants": "Humans",
+	"CapitalCity": "Zerm",
+	"URL": "https://starwars.fandom.com/wiki/Zerm/Legends",
+	"Starport": 2, // population unstated; weird weather, killer storms
+	"Shadowport": false,
+	"BlackMarket": false,
+	"Precipitation": 5, // tropical; weird weather; killer storms
+	"ImperialPresence": 0,
+	"OldWestiness": 0,
+	"Megafauna": 0,
+	"Rarity": 0,
+	"Criticism": 0,
+	"Slavery": 0,
+	"Spice": 5, // pick your spice refinery plant
+	"Trespassing": 0,
+	"Military": 0,
 	"Slicing": 0,
 	"Theft": 0,
 	"Bribery": 0,
