@@ -125,7 +125,7 @@ const localEmpireEvents = [
 	'<span class="local-event-destiny-optional">LOCAL COLOR:</span> The local <a href="https://starwars.fandom.com/wiki/Stimcaf" ' +
 		'target="_blank">Stimcaf</a> ' + htmlStimcafEnergizing,
 	'<span class="local-event-destiny-optional">LOCAL COLOR:</span> The local <a href="https://starwars.fandom.com/wiki/Stimcaf" ' +
-		'target="_blank">Stimbrew</a>' + htmlStimbrew,
+		'target="_blank">Stimbrew</a> ' + htmlStimbrew,
 	'<span class="local-event-destiny-optional">LOCAL COLOR:</span> The local <a href="https://starwars.fandom.com/wiki/Stimcaf" ' +
 		'target="_blank">Stimbucha</a> ' + htmlStimbucha,
 	'<span class="local-event-destiny-optional">LOCAL COLOR:</span> The local <a href="https://starwars.fandom.com/wiki/Stimcaf" ' +
@@ -214,7 +214,7 @@ const localOldWestEvents = [
 	'<span class="local-event-free">WRETCHED HIVE:</span> A fresh bloodstain is visible on the ground near your ship.',
 	'<span class="local-event-free">LOCAL COLOR:</span> You are cordially invited to a gambling event.',
 	'<span class="local-event-free">LOCAL COLOR:</span> <em><b>Wanted:</b></em> Fearless PodRacer Jockeys and mechanics for the local podraces.',
-	'<span class="local-event-free">LOCAL COLOR:</span> <i>"Say, that\'s a shiny ship you got there. Is she for sale?"</i>',
+	'<span class="local-event-free">LOCAL COLOR:</span> <i>"Say, that\'s a <b>shiny</b> ship you got there. Is she for sale?"</i>',
 	'<span class="local-event-free">LOCAL COLOR:</span> <i>"How much you want for that droid?"</i>',
 	'<span class="local-event-free">ATTENTION, PILOT:</span> A local hotshot challenges you to a race.',
 	'<span class="local-event-free">LOCAL COLOR:</span> A merchant requests your assistance with a local thief.',

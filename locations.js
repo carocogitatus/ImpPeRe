@@ -2323,7 +2323,7 @@ const locations = [
 	"Terrain": "<span class='highlight'>mountains</span>, valleys, plains, forest",
 	"Gravity": 1,
 	"Inhabitants": "Humans",
-	"CapitalCity": "Ghorman",
+	"CapitalCity": "Palmo",
 	"URL": "https://starwars.fandom.com/wiki/Ghorman",
 	"Starport": 2, // population 800k
 	"Shadowport": false,
@@ -2341,6 +2341,11 @@ const locations = [
 	"Slicing": 0,
 	"Theft": 0,
 	"Bribery": 0,
+	"events": [
+		'Ghorman: Visit the local webberies for an up close look at our adorable ghorlectipods! +' + htmlBoostDie + ' next Xenology check.',
+		'<span class="local-event-free" id="local1">LOCAL COLOR:</span>: A peaceful but energetic crowd chants anti-Imperial slogans in remembrance of the Ghorman Massacre.',
+		'<span class="local-event-free" id="local2">I KNOW A GUY</span>: <i>"Yes, they\'re expensive, but worth it. Right this way, my good sentient!"</i> 2x cost but +1 HP on <a href="https://star-wars-rpg-ffg.fandom.com/wiki/Category:Armor#ATTIRE_&_OTHER_CLOTHES" target="_blank">Attire & Other Clothes</a>.',
+	],
 },
 {
 	"Name": "Gizer",
